@@ -1,0 +1,2 @@
+# seats-autoChecker
+seats-autochecker
