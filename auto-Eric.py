@@ -41,7 +41,6 @@ def startChecking(url):
     try:
         page = requests.get(url)
         soup = BeautifulSoup(page.content, 'html.parser')
-
         tables = soup.find_all('table', class_="'table")  # single quote in 'table
         seats = tables[0].select("td strong")
         seatNum = seats[0].get_text()
@@ -52,14 +51,14 @@ def startChecking(url):
 
     if int(seatNum) > 0:
         print("seat available! It has " + seatNum + " seats.")
-        account_sid = "ACa46aa4ea5147d47ee80418541319a289"
-        auth_token = "f4b40a7eeb7ea5b6b54103b5babcc54c"
+        account_sid = "AC9243e54a42f9bd42923d8fd0f65b9f65"
+        auth_token = "fc5916c757230f76a9c812b7bac5f51c"
 
         client = Client(account_sid, auth_token)
 
         message = client.messages.create(
-            to="+8613862252454",
-            from_="+12058595106",
+            to="+8615759265860",
+            from_="+16106798792",
             body = ("your course is available with " + seatNum + " seats left, register at " + url)
             )
         return int(seatNum)

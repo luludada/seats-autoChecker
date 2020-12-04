@@ -52,14 +52,14 @@ def startChecking(url):
 
     if int(seatNum) > 0:
         print("seat available! It has " + seatNum + " seats.")
-        account_sid = "ACa46aa4ea5147d47ee80418541319a289"
-        auth_token = "f4b40a7eeb7ea5b6b54103b5babcc54c"
+        account_sid = "AC8261fe450c2e02e4193ff174687bc206"
+        auth_token = "c5ef92d6c22ae2c52db28424ab222d48"
 
         client = Client(account_sid, auth_token)
 
         message = client.messages.create(
-            to="+8613862252454",
-            from_="+12058595106",
+            to="+12368634352",
+            from_="+12057369546",
             body = ("your course is available with " + seatNum + " seats left, register at " + url)
             )
         return int(seatNum)
